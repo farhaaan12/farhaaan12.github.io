@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farhan Portofolio – Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--soft:#f4f5f8;--ink:#10131c;--muted:#566074;--line:#dfe3ec;--btn:#0b0b0f;--btn-ink:#ffffff;--accent:#2b1fd0;--photo:#0a0aa5;--shadow:0 6px 24px rgba(16,19,28,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e121c;--soft:#151a27;--ink:#eef0f6;--muted:#a2abc0;--line:#283049;--btn:#eef0f6;--btn-ink:#0e121c;--accent:#9c92ff;--shadow:0 6px 24px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e121c;--soft:#151a27;--ink:#eef0f6;--muted:#a2abc0;--line:#283049;--btn:#eef0f6;--btn-ink:#0e121c;--accent:#9c92ff;--shadow:0 6px 24px rgba(0,0,0,.4);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 1.5rem}
+.icon{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;padding:1rem 1rem 0}
+.pill{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.6rem .8rem .6rem 1.5rem;box-shadow:var(--shadow)}
+.brand{font-weight:700;text-decoration:none;margin-right:auto}
+.pill nav{display:flex;gap:.5rem;flex-wrap:wrap}
+.pill nav a{background:var(--btn);color:var(--btn-ink);text-decoration:none;font-weight:700;font-size:.9rem;padding:.55rem 1.1rem;border-radius:6px}
+.pill nav a:hover{opacity:.85}
+.social{display:flex;gap:.25rem}
+.social a{display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:50%;color:var(--muted)}
+.social a:hover{color:var(--accent)}
+
+section{padding:clamp(3.5rem,9vw,6rem) 0;border-bottom:1px dashed var(--line)}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 1rem}
+
+/* page 1 */
+.about{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,5vw,3.5rem);align-items:center}
+.avatar{width:clamp(140px,22vw,220px);aspect-ratio:1;border-radius:50%;background:var(--photo);color:#fff;display:grid;place-items:center;font:800 clamp(2.2rem,6vw,3.4rem)/1 "Plus Jakarta Sans",sans-serif;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.about p{margin:0;font-size:1.1rem;max-width:52ch}
+.about h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:1rem}
+
+/* page 2 */
+.center{text-align:center;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:500;margin-bottom:3rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 3rem;max-width:720px;margin:0 auto}
+.entry{margin-bottom:1.5rem}
+.entry b{display:block}
+.entry span{display:block;color:var(--muted);font-size:.95rem}
+.cols h3{font-size:1.1rem;margin-bottom:1.25rem}
+
+/* page 3 */
+.head3{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem}
+.head3 h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+.head3 p{margin:0;color:var(--muted);max-width:40ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{background:var(--soft);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.thumb{height:130px;display:grid;place-items:center;font:800 2.6rem/1 "Plus Jakarta Sans",sans-serif;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.thumb{position:relative;overflow:hidden}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.card .body{padding:1.25rem 1.25rem 1.5rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.card h3{font-size:1.15rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:.25rem 0 0;list-style:none}
+.tags li{font-size:.78rem;font-weight:500;border:1px solid var(--line);background:var(--bg);padding:.15rem .6rem;border-radius:999px}
+.card a.go{font-weight:700;color:var(--accent);text-decoration:none;margin-top:.5rem}
+.card a.go:hover{text-decoration:underline}
+
+/* page 4 */
+#contact{background:var(--soft);border-bottom:0;padding-bottom:3rem}
+#contact h2{font-size:clamp(2.2rem,6vw,3.8rem);max-width:12ch;margin-bottom:3rem}
+.rows{display:grid;gap:1.25rem;margin-bottom:4rem}
+.rows a,.rows div{display:flex;align-items:center;gap:1rem;text-decoration:none;font-size:1.1rem}
+.rows .icon{width:1.6rem;height:1.6rem;color:var(--accent);flex:none}
+footer{text-align:center;padding-top:2.5rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+footer .round{display:flex;justify-content:center;gap:.75rem;margin-top:1rem}
+footer .round a{display:grid;place-items:center;width:2.6rem;height:2.6rem;border:1px solid var(--line);border-radius:50%;color:var(--muted)}
+footer .round a:hover{color:var(--accent);border-color:var(--accent)}
+
+@media (max-width:820px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.about{grid-template-columns:1fr;justify-items:start}.cols,.grid{grid-template-columns:1fr}.pill{border-radius:24px;padding-left:1rem}.social{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+</svg>
+
+<header class="nav">
+<div class="pill">
+<a class="brand" href="#about">Farhan Portofolio</a>
+<nav aria-label="Main">
+<a href="#about">About</a><a href="#resume">Resume</a><a href="#project">Project</a><a href="#contact">Contact</a>
+</nav>
+<div class="social">
+<a href="mailto:farhanfarhan54202@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a>
+<a href="https://www.linkedin.com/in/farhan-farhan-350a48253/" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+<a href="https://github.com/farhaaan12" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+</div>
+</div>
+</header>
+
+<main>
+<!-- PAGE 1: About -->
+<section id="about"><div class="wrap about">
+<!-- Ganti isi .avatar dengan: <img src="foto.jpg" alt="Foto Farhan"> -->
+<div class="avatar"><img src="img/fp1.jpeg" alt="Foto Farhan"></div>
+<div>
+<h1>Hi, I’m Farhan.</h1>
+<p>I am a Data Analyst with a data science foundation, skilled in Excel, SQL, Python, and data visualization. I have analyzed sales performance and built a machine learning model to predict customer churn, helping translate data into practical business decisions.</p>
+</div>
+</div></section>
+
+<!-- PAGE 2: Resume -->
+<section id="resume"><div class="wrap">
+<h2 class="center">Education &amp; Work</h2>
+<div class="cols">
+<div>
+<h3>Education</h3>
+<div class="entry"><b>Purwadhika Digital Technology School</b><span>Data Science and Machine Learning</span><span>Aug 2026 – Jan 2027</span></div>
+<div class="entry"><b>Institut Teknologi dan Bisnis Bina Sarana Global</b><span>Informatics Engineering</span></div>
+</div>
+<div>
+<h3>Work Experience</h3>
+<div class="entry"><b>PT Angsa Daya</b><span>Warehouse Staff</span><span>2018 – 2026</span></div>
+</div>
+</div>
+</div></section>
+
+<!-- PAGE 3: Project (6 cards) -->
+<section id="project"><div class="wrap">
+<div class="grid">
+<article class="card">
+  <div class="thumb" style="--c1:#2b1fd0;--c2:#5b8def">
+    <img src="img/dekoruma.jpg" alt="Analisis kegagalan instalasi dan dampak refund Dekoruma">
+  </div>
+  <div class="body">
+    <h3>Root Cause Analysis of Installation Failures and Refund Impact in Omnichannel Furniture Retail</h3>
+    <p>Analyzed sales by product, region, and month to find top performers and slow periods.</p>
+    <ul class="tags"><li>Python</li><li>SQL</li></ul>
+    <a class="go" href="https://github.com/fransiskusbs/dekoruma-failed-installation-analysis">View project →</a>
+  </div>
+</article>
+<article class="card"><div class="thumb" style="--c1:#0f766e;--c2:#34d399">
+    <img src="img/churn.jpg" alt="Prediksi churn pelanggan e-commerce" loading="lazy">
+  </div><div class="body"><h3>Customer Churn Prediction</h3><p>Built a machine learning model to predict which customers are likely to leave.</p><ul class="tags"><li>Python</li><li>scikit-learn</li></ul><a class="go" href="https://github.com/farhaaan12/ecommerce-churn-classification-model/tree/main">View project →</a></div></article>
+<article class="card"><div class="thumb" style="--c1:#b45309;--c2:#f59e0b">
+    <img src="img/dashboard.png" alt="Dashboard penjualan interaktif di Tableau" loading="lazy">
+  </div><div class="body"><h3>Interactive Sales Dashboard</h3><p>A dashboard that tracks revenue, orders, and growth in one view.</p><ul class="tags"><li>Tableau</li></ul><a class="go" href="https://public.tableau.com/app/profile/farhan.farhan1454/viz/dashboard_dekoruma/Dashboard1">View project →</a></div></article>
+<article class="card"><div class="thumb" style="--c1:#9d174d;--c2:#f472b6">
+    <img src="img/pendaftaran.jpg" alt="Program pendaftaran pasien rumah sakit" loading="lazy">
+  </div><div class="body"><h3>Patient Registration Program</h3><p>Fleet Transition Roadmap Based on 2 Key Requirements: Zero-Emission Vehicles (ZEV) & Wheelchair-Accessible Vehicles (WAV).</p><ul class="tags"><li>Python</li></ul><a class="go" href="https://github.com/farhaaan12/python_rumah_sakit_sistem">View project →</a></div></article>
+<article class="card"><div class="thumb" style="--c1:#1d4ed8;--c2:#38bdf8">
+    <img src="img/karbon.jpg" alt="Analisis emisi karbon dan strategi elektrifikasi taksi NYC" loading="lazy">
+  </div><div class="body"><h3>Carbon Emissions Analysis & Electrification Strategy for NYC Taxis</h3><p>Reviewed stock movement to spot overstock and shortages in the warehouse.</p><ul class="tags"><li>Data Analysis</li></ul><a class="go" href="https://github.com/farhaaan12/Carbon-Emission-Analysis-and-NYC-Taxi-Electrification-Strategy/blob/main/Analisa%20emisi%20NYC.pdf">View project →</a></div></article>
+<article class="card"><div class="thumb" style="--c1:#6d28d9;--c2:#a78bfa">
+    <img src="img/hr.jpg" alt="Analisis attrition karyawan HR" loading="lazy">
+  </div><div class="body"><h3>HR Employee Attrition Analysis</h3><p>Analyze 15 visualizations of IBM HR data to identify high-risk groups and formulate priority retention recommendations.</p><ul class="tags"><li>Python</li><li>Pandas</li></ul><a class="go" href="#">View project →</a></div></article>
+</div>
+</div></section>
+
+<!-- PAGE 4: Contact -->
+<section id="contact"><div class="wrap">
+<p class="eyebrow">Contact</p>
+<h2>Let’s Connect and Collaborate!</h2>
+<div class="rows">
+<a href="mailto:farhanfarhan54202@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>farhanfarhan54202@gmail.com</a>
+<a href="tel:+6281286253045"><svg class="icon"><use href="#i-phone"/></svg>+62 812 8625 3045</a>
+<div><svg class="icon"><use href="#i-pin"/></svg>Jakarta, Indonesia</div>
+</div>
+<footer>
+© 2026 <b>Farhan Portofolio</b>. All rights reserved.
+<div class="round">
+<a href="mailto:farhanfarhan54202@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a>
+<a href="https://www.linkedin.com/in/farhan-farhan-350a48253/" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+<a href="https://github.com/farhaaan12" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+</div>
+</footer>
+</div></section>
+</main>
+</body>
+</html>
